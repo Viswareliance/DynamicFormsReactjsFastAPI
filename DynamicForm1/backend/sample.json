@@ -1,0 +1,195 @@
+{
+  "HeaderSection": {
+    "Form_heading": "Job Requisition",
+    "Form_ID": "1",
+    "Purpose": "Creating Job Requisition",
+    "Created_To": "Job Requisition",
+    "Version_number": "V_1_0"
+  },
+  "ToolBarSection": {
+    "core": ["Company", "Department", "Team"],
+    "classification": ["ResourceType", "TaskType", "Period"],
+    "abstract": ["Person", "WorkItem", "FinancialEntry"]
+  },
+  "QuestionSection": {
+    "Company": [
+      {
+        "QturnId": "1",
+        "Question_section_title": "Job Requisition Id",
+        "Question_description": "Auto-Generated Job Requisition ID",
+        "placeholder": "HR-HIREQ-XXXX",
+        "fieldType": "text",
+        "readOnly": true,
+        "description": {
+          "short": "📝 Unique Job Requisition Identifier.",
+          "detailed": "This ID must follow the HR-HIREQ- format followed by digits.",
+          "tip": "Example: HR-HIREQ-1025"
+        }
+      },
+      {
+        "QturnId": "2",
+        "Question_section_title": "No Of Positions",
+        "Question_description": "How many positions are required?",
+        "placeholder": "Enter required position",
+        "fieldType": "number",
+        "readOnly": false,
+        "validationRules": {
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "errorMessage": "Positions must be between 1 and 10."
+        },
+        "description": {
+          "short": "👥 Total number of required positions.",
+          "detailed": "Specify how many positions need to be filled.",
+          "tip": "Example: 3"
+        }
+      },
+
+      {
+        "QturnId": "3",
+        "Question_section_title": "Image",
+        "fieldType": "image",
+        "image": {
+          "src": "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+          "alt": "Beautiful Mountain"
+        },
+        "question": {
+          "Question_description": "What natural place is shown in the image?",
+          "placeholder": "Enter your answer"
+        },
+        "validationRules": {
+          "required": true,
+          "minLength": 3
+        }
+      },
+
+      {
+        "QturnId": "4",
+        "Question_section_title": "Video",
+        "label": "Video Question",
+        "name": "video_answer",
+        "fieldType": "video",
+        "video": {
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        "question": {
+          "Question_description": "What natural place is shown in this video?",
+          "placeholder": "Enter your answer..."
+        },
+        "validationRules": {
+          "required": true,
+          "minLength": 3
+        },
+        "description": {
+          "short": "image.",
+          "detailed": "image",
+          "tip": "image"
+        }
+      },
+
+      {
+        "QturnId": "5",
+        "Question_section_title": "Audio",
+        "fieldType": "audio",
+        "audio": {
+          "url": "https://www.w3schools.com/html/horse.mp3"
+        },
+        "question": {
+          "Question_description": "What natural sound is heard in this audio?",
+          "placeholder": "Enter your answer..."
+        },
+        "validationRules": {
+          "required": true,
+          "minLength": 3
+        },
+        "description": {
+          "short": " image.",
+          "detailed": "image",
+          "tip": "image"
+        }
+      }
+    ],
+
+    "Department": [
+      {
+        "QturnId": "1",
+        "Question_section_title": "Department Requisition Id",
+        "Question_description": "Auto-Generated Department Requisition ID",
+        "placeholder": "HR-DEP-XXXX",
+        "fieldType": "text",
+        "readOnly": true,
+        "description": {
+          "short": "📝 Unique Department Identifier.",
+          "detailed": "This ID uniquely identifies the department requisition.",
+          "tip": "Example: HR-DEP-1025"
+        }
+      },
+      {
+        "QturnId": "2",
+        "Question_section_title": "Department Position Count",
+        "Question_description": "Number of positions required in this department.",
+        "placeholder": "Enter number of positions",
+        "fieldType": "number",
+        "validationRules": {
+          "required": true,
+          "min": 1,
+          "max": 10
+        },
+        "description": {
+          "short": "👥 Total number of required positions.",
+          "detailed": "Specify how many positions need to be filled.",
+          "tip": "Example: 3"
+        }
+      }
+    ],
+
+    "Team": [],
+    "ResourceType": [
+      {
+        "QturnId": "1",
+        "Question_section_title": "Resource Type Id",
+        "Question_description": "Auto-Generated Resource Type ID",
+        "placeholder": "HR-RES-XXXX",
+        "fieldType": "text",
+        "readOnly": true,
+        "description": {
+          "short": "📝 Unique Department Identifier.",
+          "detailed": "This ID uniquely identifies the department requisition.",
+          "tip": "Example: HR-RES-XXXX"
+        }
+      },
+      {
+        "QturnId": "2",
+        "Question_section_title": "Resource Type Count",
+        "fieldType": "number",
+        "validationRules": {
+          "required": true,
+          "min": 1,
+          "max": 10
+        },
+        "description": {
+          "short": "👥 Total number of required positions.",
+          "detailed": "Specify how many positions need to be filled.",
+          "tip": "Example: 3"
+        }
+      }
+    ],
+
+    "TaskType": [],
+    "Period": [],
+    "Person": [],
+    "WorkItem": [],
+    "FinancialEntry": []
+  },
+
+  "ControlSection": {
+    "Machine_IP": "192.168.1.45",
+    "User_Name": "John",
+    "Employee_ID": "EMP_0045",
+    "Created_Date": "2025-12-01 12:25:00",
+    "Last_Updated_Date": "2025-12-01 12:25:00",
+    "Created_By": "John",
+    "Status": "Draft"
+  }
+}
