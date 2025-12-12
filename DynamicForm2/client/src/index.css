@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css (or wherever you keep global styles) */
+
+/* Target the RJSF form's object grid and force two columns always */
+.rjsf .rjsf-field-object .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Ensure each grid cell doesn't get forced full width by nested rules */
+.rjsf .rjsf-field-object .grid > div {
+  width: 100%;
+  display: block;
+}
+
+/* Optional: tighten input widths inside the grid cells so they sit side-by-side */
+/* If using bootstrap form-control might be 100% width — that's fine; cells are columns */
+/* Make radio and checkbox groups compact */
+.rjsf .MuiFormGroup-root {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rjsf .MuiFormControlLabel-root {
+  width: 48%; /* 2-column layout */
+  margin: 2px 0;
+}
